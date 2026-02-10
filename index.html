@@ -1,32 +1,194 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SubZen - Developer</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-        .container {
-            text-align: center;
-            padding: 2rem;
-        }
-        h1 { font-size: 3rem; margin-bottom: 1rem; }
-        p { font-size: 1.2rem; opacity: 0.9; }
-    </style>
+    <title>Fifty Three Studio - Mobile App & Game Developer</title>
+    <meta name="description" content="Portfolio of Fifty Three Studio - High quality mobile applications and games built with Flutter and Unity.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1>SubZen</h1>
-        <p>Subscription Management App</p>
+
+    <!-- Language Switcher -->
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
+        <button class="lang-btn" onclick="setLanguage('tr')">TR</button>
     </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <h1 data-i18n="hero_title">Fifty Three Studio</h1>
+            <p class="subtitle" data-i18n="hero_subtitle">Solo Game Developer & Flutter Specialist</p>
+            <div class="tags" style="justify-content: center; margin-bottom: 2rem;">
+                <span class="tag"><i class="fab fa-unity"></i> Unity</span>
+                <span class="tag"><i class="fab fa-google"></i> Flutter</span>
+                <span class="tag"><i class="fas fa-code"></i> C# & Dart</span>
+            </div>
+            <a href="#portfolio" class="store-button" style="background: var(--primary-color); color: white;">
+                <span data-i18n="view_projects">View Projects</span> <i class="fas fa-arrow-down" style="margin-left: 10px;"></i>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 data-i18n="my_apps">My Applications</h2>
+            <div class="projects-grid">
+                
+                <!-- Project 1: SubZen -->
+                <article class="project-card">
+                    <div class="card-header">
+                        <img src="Assets/Icons/Subzen/app_icon.png" alt="SubZen Icon" class="app-icon-placeholder" style="object-fit: contain; padding: 0; background: transparent;">
+                        <div>
+                            <h3>SubZen</h3>
+                            <span class="status-badge status-live" data-i18n="badge_available">Available Now</span>
+                        </div>
+                    </div>
+                    <div class="card-description">
+                        <p data-i18n="desc_subzen">A comprehensive subscription management app to track your recurring expenses. Visualize your spending, get notifications for upcoming bills, and save money.</p>
+                        <div class="tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Riverpod</span>
+                            <span class="tag">Finance</span>
+                        </div>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.fiftythreestudio.subzen" target="_blank" class="store-button">
+                        <i class="fab fa-google-play"></i> <span data-i18n="get_google_play">Get it on Google Play</span>
+                    </a>
+                </article>
+
+                <!-- Project 2: ShareReady -->
+                <article class="project-card">
+                    <div class="card-header">
+                         <img src="Assets/Icons/ShareReady/app_icon.png" alt="ShareReady Icon" class="app-icon-placeholder" style="object-fit: contain; padding: 0; background: transparent;">
+                        <div>
+                            <h3>ShareReady</h3>
+                            <span class="status-badge status-live" data-i18n="badge_available">Available Now</span>
+                        </div>
+                    </div>
+                    <div class="card-description">
+                        <p data-i18n="desc_shareready">Local video compression and conversion tool. Compress large video files directly on your device without uploading to the cloud. Privacy-first design.</p>
+                        <div class="tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">FFmpeg</span>
+                            <span class="tag">Tools</span>
+                        </div>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.fiftythreestudio.shareready" target="_blank" class="store-button">
+                        <i class="fab fa-google-play"></i> <span data-i18n="get_google_play">Get it on Google Play</span>
+                    </a>
+                </article>
+
+                <!-- Project 3: Match Insights for PUBG -->
+                <article class="project-card">
+                    <div class="card-header">
+                        <img src="Assets/Icons/MatchInsightsforPUBG/play_store_icon_512.png" alt="Match Insights Icon" class="app-icon-placeholder" style="object-fit: contain; padding: 0; background: transparent;">
+                        <div>
+                            <h3>Match Insights</h3>
+                            <span class="status-badge status-review" data-i18n="badge_review">Under Review</span>
+                        </div>
+                    </div>
+                    <div class="card-description">
+                        <p data-i18n="desc_matchinsights">Advanced analytics and AI coaching for PUBG players. Track your K/D, win rates, and damage stats. Get personalized improvement tips from AI based on your recent matches, and analyze your match history in detail.</p>
+                        <div class="tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">AI Integration</span>
+                            <span class="tag">PUBG API</span>
+                            <span class="tag">Big Data</span>
+                        </div>
+                    </div>
+                    <button class="store-button" style="opacity: 0.5; cursor: not-allowed;" title="Coming Soon">
+                        <i class="fas fa-clock"></i> <span data-i18n="coming_soon">Coming Soon</span>
+                    </button>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Fifty Three Studio. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="subzen-privacy.html" data-i18n="policy_subzen">SubZen Privacy Policy</a>
+                <a href="shareready-privacy.html" data-i18n="policy_shareready">ShareReady Privacy Policy</a>
+                <a href="matchinsights-privacy.html" data-i18n="policy_matchinsights">Match Insights Privacy Policy</a>
+                <a href="matchinsights-terms.html" data-i18n="terms_service">Terms of Service</a>
+            </div>
+            <div style="margin-top: 20px; font-size: 0.9em; opacity: 0.7;">
+                <p>Contact: fiftythreestudio@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                hero_title: "Fifty Three Studio",
+                hero_subtitle: "Solo Game Developer & Flutter Specialist",
+                view_projects: "View Projects",
+                my_apps: "My Applications",
+                badge_available: "Available Now",
+                badge_review: "Under Review",
+                get_google_play: "Get it on Google Play",
+                coming_soon: "Coming Soon",
+                desc_subzen: "A comprehensive subscription management app to track your recurring expenses. Visualize your spending, get notifications for upcoming bills, and save money.",
+                desc_shareready: "Local video compression and conversion tool. Compress large video files directly on your device without uploading to the cloud. Privacy-first design.",
+                desc_matchinsights: "Advanced analytics and AI coaching for PUBG players. Track your K/D, win rates, and damage stats. Get personalized improvement tips from AI based on your recent matches, and analyze your match history in detail.",
+                policy_subzen: "SubZen Privacy Policy",
+                policy_shareready: "ShareReady Privacy Policy",
+                policy_matchinsights: "Match Insights Privacy Policy",
+                terms_service: "Terms of Service"
+            },
+            tr: {
+                hero_title: "Fifty Three Studio",
+                hero_subtitle: "Bağımsız Oyun & Flutter Uygulama Geliştiricisi",
+                view_projects: "Projeleri Gör",
+                my_apps: "Uygulamalarım",
+                badge_available: "Yayında",
+                badge_review: "İncelemede",
+                get_google_play: "Google Play'den İndir",
+                coming_soon: "Çok Yakında",
+                desc_subzen: "Aboneliklerinizi takip etmeniz için kapsamlı bir yönetim uygulaması. Harcamalarınızı görselleştirin, yaklaşan ödemeler için bildirim alın ve tasarruf edin.",
+                desc_shareready: "Yerel video sıkıştırma ve dönüştürme aracı. Büyük videoları buluta yüklemeden doğrudan cihazınızda sıkıştırın. Gizlilik odaklı tasarım.",
+                desc_matchinsights: "PUBG oyuncuları için gelişmiş analiz ve yapay zeka koçluğu. K/D, kazanma oranı ve hasar istatistiklerini takip edin. AI destekli kişisel gelişim ipuçları alın.",
+                policy_subzen: "SubZen Gizlilik Politikası",
+                policy_shareready: "ShareReady Gizlilik Politikası",
+                policy_matchinsights: "Match Insights Gizlilik Politikası",
+                terms_service: "Hizmet Şartları"
+            }
+        };
+
+        function setLanguage(lang) {
+            localStorage.setItem('lang', lang);
+            document.documentElement.lang = lang;
+            
+            // Update buttons state
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+            });
+
+            // Update text content
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    element.innerText = translations[lang][key];
+                }
+            });
+        }
+
+        // Initialize language
+        const savedLang = localStorage.getItem('lang') || 'en';
+        setLanguage(savedLang);
+    </script>
 </body>
 </html>
