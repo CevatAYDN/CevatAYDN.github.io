@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SubZen - Account & Data Deletion Request</title>
+  <style>
+    :root {
+      --primary: #4F46E5;
+      --primary-dark: #3730A3;
+      --bg: #0F172A;
+      --card-bg: #1E293B;
+      --border: #334155;
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --danger: #EF4444;
+      --success: #10B981;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .container {
+      max-width: 760px;
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+    }
+
+    .header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-badge {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), #818CF8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .lang-switcher {
+      display: flex;
+      gap: 0.5rem;
+      margin-left: auto;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 0.35rem 0.75rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+
+    .lang-btn.active, .lang-btn:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      color: #FFFFFF;
+      margin-top: 1.75rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    p, li {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    .badge-deleted {
+      background: rgba(239, 68, 68, 0.15);
+      color: #FCA5A5;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .badge-retained {
+      background: rgba(245, 158, 11, 0.15);
+      color: #FCD34D;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .action-card {
+      background: rgba(79, 70, 229, 0.08);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: var(--primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-top: 0.75rem;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--primary-dark);
+    }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    .footer a {
+      color: #818CF8;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo-badge">⚡</div>
+      <div>
+        <h1>SubZen</h1>
+        <div class="subtitle">by Fifty Three Studio • Account & Data Deletion</div>
+      </div>
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('tr')">TR</button>
+      </div>
+    </div>
+
+    <!-- ENGLISH SECTION -->
+    <div id="content-en">
+      <p>
+        In accordance with Google Play's User Data Policy, users of <strong>SubZen</strong> ("Application"), 
+        developed by <strong>Fifty Three Studio</strong>, have full rights to request the deletion of their 
+        account and all associated personal and subscription data.
+      </p>
+
+      <h2>1. How to Delete Your Account In-App</h2>
+      <p>You can delete your account and all data directly from inside the SubZen app:</p>
+      <ol>
+        <li>Open the <strong>SubZen</strong> app on your device.</li>
+        <li>Navigate to the <strong>Settings</strong> or <strong>Profile</strong> tab.</li>
+        <li>Scroll down to the <strong>Account & Security</strong> section.</li>
+        <li>Tap <strong>Delete Account</strong>.</li>
+        <li>Confirm your action. Your account and cloud data will be permanently wiped immediately.</li>
+      </ol>
+
+      <h2>2. How to Request Account Deletion via Web</h2>
+      <div class="action-card">
+        <p><strong>If you have uninstalled the app or cannot access it:</strong></p>
+        <p>
+          You can submit an account deletion request without reinstalling the app by emailing our support team from the email address registered with your SubZen account:
+        </p>
+        <a class="btn" href="mailto:fiftythreestudio@gmail.com?subject=SubZen%20Account%20Deletion%20Request&body=Hello%2C%0A%0APlease%20permanently%20delete%20my%20SubZen%20account%20and%20all%20associated%20data.%0A%0ARegistered%20Email%3A%20%0AUser%20ID%20(if%20known)%3A%20%0A%0AThank%20you.">
+          ✉️ Request Account Deletion (fiftythreestudio@gmail.com)
+        </a>
+      </div>
+
+      <h2>3. Data Deletion & Retention Policy</h2>
+      <p>When an account deletion request is processed:</p>
+      <ul>
+        <li>
+          <span class="badge-deleted">DELETED</span> <strong>User Credentials & Profile:</strong> Email address, User ID (UID), display name, and avatar are permanently removed from Firebase Authentication and Firestore.
+        </li>
+        <li>
+          <span class="badge-deleted">DELETED</span> <strong>Subscription & Bill Records:</strong> All cloud-synchronized subscriptions, bills, categories, and custom reminder schedules are permanently deleted.
+        </li>
+        <li>
+          <span class="badge-deleted">DELETED</span> <strong>Payment History:</strong> All recorded historical payments and archives are wiped from our cloud servers.
+        </li>
+        <li>
+          <span class="badge-retained">LOCAL DATA</span> <strong>On-Device Local Data:</strong> Local SQLite records are erased during the in-app deletion process or when the app is uninstalled.
+        </li>
+      </ul>
+
+      <h2>4. Processing Timeline</h2>
+      <p>
+        In-app account deletions take effect <strong>immediately</strong>. Web-requested account deletions are validated and completed within <strong>30 days</strong> of receiving your request.
+      </p>
+    </div>
+
+    <!-- TURKISH SECTION -->
+    <div id="content-tr" style="display: none;">
+      <p>
+        Google Play Kullanıcı Verileri Politikası uyarınca, <strong>Fifty Three Studio</strong> tarafından geliştirilen 
+        <strong>SubZen</strong> ("Uygulama") kullanıcıları, hesaplarının ve ilişkili tüm kişisel ve abonelik verilerinin 
+        silinmesini talep etme hakkına sahiptir.
+      </p>
+
+      <h2>1. Uygulama İçinden Hesap Silme Adımları</h2>
+      <p>Hesabınızı doğrudan SubZen mobil uygulaması içinden silebilirsiniz:</p>
+      <ol>
+        <li>Cihazınızda <strong>SubZen</strong> uygulamasını açın.</li>
+        <li><strong>Ayarlar</strong> veya <strong>Profil</strong> sekmesine gidin.</li>
+        <li>En altta yer alan <strong>Hesap Güvenliği</strong> bölümüne inin.</li>
+        <li><strong>Hesabımı Sil</strong> seçeneğine dokunun.</li>
+        <li>Onay penceresinde silme işlemini onaylayın. Hesabınız ve tüm bulut verileriniz anında kalıcı olarak silinecektir.</li>
+      </ol>
+
+      <h2>2. Web Üzerinden Hesap Silme Talebi</h2>
+      <div class="action-card">
+        <p><strong>Uygulamayı sildiyseniz veya erişemiyorsanız:</strong></p>
+        <p>
+          Uygulamayı tekrar yüklemenize gerek kalmadan, SubZen hesabınızla ilişkili e-posta adresinizden destek ekibimize talep ileterek verilerinizin silinmesini sağlayabilirsiniz:
+        </p>
+        <a class="btn" href="mailto:fiftythreestudio@gmail.com?subject=SubZen%20Hesap%20Silme%20Talebi&body=Merhaba%2C%0A%0ASubZen%20hesab%C4%B1m%C4%B1%20ve%20ili%C5%9Fkili%20t%C3%BCm%20verilerimi%20kal%C4%B1c%C4%B1%20olarak%20silmenizi%20talep%20ediyorum.%0A%0AKay%C4%B1tl%C4%B1%20E-posta%3A%20%0AKullan%C4%B1c%C4%B1%20ID%20(varsa)%3A%20%0A%0ATe%C5%9Fekk%C3%BCrler.">
+          ✉️ Hesap Silme Talebi Gönder (fiftythreestudio@gmail.com)
+        </a>
+      </div>
+
+      <h2>3. Veri Silme ve Saklama Politikası</h2>
+      <p>Hesap silme işlemi tamamlandığında:</p>
+      <ul>
+        <li>
+          <span class="badge-deleted">SİLİNİR</span> <strong>Kullanıcı Kimlik ve Profil Bilgileri:</strong> E-posta adresi, UID, profil adı ve fotoğrafı Firebase Authentication ve Firestore sistemlerimizden tamamen silinir.
+        </li>
+        <li>
+          <span class="badge-deleted">SİLİNİR</span> <strong>Abonelik ve Fatura Kayıtları:</strong> Buluta senkronize edilmiş tüm aktif/arşiv abonelikler, faturalar, hatırlatıcılar ve kategoriler kalıcı olarak silinir.
+        </li>
+        <li>
+          <span class="badge-deleted">SİLİNİR</span> <strong>Ödeme Geçmişi:</strong> Kayıtlı tüm geçmiş ödeme makbuzları ve harcama istatistikleri bulut sunucularından temizlenir.
+        </li>
+        <li>
+          <span class="badge-retained">YEREL VERİ</span> <strong>Cihazdaki Yerel Veriler:</strong> Uygulama içi silme işleminde yerel veritabanı anında sıfırlanır veya uygulama kaldırıldığında cihazdan silinir.
+        </li>
+      </ul>
+
+      <h2>4. İşlem Süresi</h2>
+      <p>
+        Uygulama içi silme işlemi <strong>anında</strong> gerçekleşir. Web / e-posta yoluyla iletilen hesap silme talepleri kimlik doğrulamasının ardından en geç <strong>30 gün</strong> içinde tamamlanır.
+      </p>
+    </div>
+
+    <div class="footer">
+      <p>© 2026 Fifty Three Studio. All rights reserved.</p>
+      <p><a href="index.html">Privacy Policy</a> • <a href="delete-account.html">Account Deletion</a></p>
+    </div>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      if (lang === 'tr') {
+        document.getElementById('content-en').style.display = 'none';
+        document.getElementById('content-tr').style.display = 'block';
+        event.target.classList.add('active');
+      } else {
+        document.getElementById('content-en').style.display = 'block';
+        document.getElementById('content-tr').style.display = 'none';
+        event.target.classList.add('active');
+      }
+    }
+  </script>
+</body>
+
+</html>
