@@ -2,79 +2,90 @@ export interface AppData {
   id: string;
   title: string;
   description: string;
-  longDescription: string;
   icon: string;
   technologies: string[];
-  tech: string[]; // Keeping for backward compatibility if needed, but primarily using technologies
   links: {
-    appStore?: string;
     playStore?: string;
-    web?: string;
     privacy?: string;
     terms?: string;
+    notices?: string;
+    deleteAccount?: string;
   };
-  features: string[];
-  category: 'Mobile App' | 'Game' | 'Utility';
+  category: 'Game' | 'App';
+  genre: string;
 }
+
+export const developerPage = 'https://play.google.com/store/apps/dev?id=8193521309024953413';
+
+const play = (id: string) => `https://play.google.com/store/apps/details?id=com.fiftythreestudio.${id}`;
 
 export const apps: AppData[] = [
   {
+    id: 'wickling',
+    title: 'Wickling: Light the Dark',
+    description: 'Karanlık bir ormanda küçük bir mum ol. Alevin hem canın, hem silahın, hem gözün; tek başparmakla oynanan aksiyon oyunu.',
+    icon: '/wickling_icon.png',
+    technologies: ['Unity', 'Firebase', 'AdMob'],
+    links: {
+      playStore: play('wickling'),
+      privacy: '/wickling-privacy.html',
+      notices: '/wickling-notices.html'
+    },
+    category: 'Game',
+    genre: 'Aksiyon'
+  },
+  {
+    id: 'gigawatt',
+    title: 'Gigawatt Inc: AI Data Center',
+    description: 'Garajdaki tek PC\'yi yapay zekâ veri merkezine büyüt. Kur, soğut, araştır; tamamen çevrimdışı oynanan simülasyon.',
+    icon: '/gigawatt_icon.png',
+    technologies: ['Unity', 'Unity LevelPlay', 'Unity IAP'],
+    links: {
+      playStore: play('gigawatt'),
+      privacy: '/gigawatt-privacy.html'
+    },
+    category: 'Game',
+    genre: 'Simülasyon'
+  },
+  {
     id: 'matchinsights',
-    title: 'MatchInsights',
-    description: 'Spor istatistikleri ve analizleri sunan mobil uygulama.',
-    longDescription: 'Hobi projesi olarak "Vibe Coding" yaklaşımıyla geliştirilen MatchInsights, spor severlere detaylı maç istatistikleri ve analizler sunar.',
+    title: 'Match Insights for PUBG',
+    description: 'Yapay zekâ destekli PUBG maç analizi ve kişiselleştirilmiş koçluk ipuçları.',
     icon: '/matchinsights_icon.png',
     technologies: ['Flutter', 'Firebase', 'Vibe Coding'],
-    tech: ['Flutter', 'Firebase', 'Vibe Coding'],
     links: {
-      playStore: 'https://play.google.com/store/apps/details?id=com.cevataydn.matchinsights',
+      playStore: play('matchinsightsforpubg'),
       privacy: '/matchinsights-privacy.html',
       terms: '/matchinsights-terms.html'
     },
-    features: [
-      'Canlı Maç Sonuçları',
-      'Detaylı Takım İstatistikleri',
-      'Yapay Zeka Destekli Analizler',
-      'Kullanıcı Dostu Arayüz'
-    ],
-    category: 'Mobile App'
+    category: 'App',
+    genre: 'Eğlence'
   },
   {
     id: 'shareready',
-    title: 'ShareReady',
-    description: 'Sosyal medya içerikleri için hızlı ve şık paylaşım şablonları.',
-    longDescription: 'Flutter ile geliştirilen ShareReady, kullanıcıların metinlerini ve görsellerini saniyeler içinde profesyonel sosyal medya paylaşımlarına dönüştürmesini sağlar.',
+    title: 'Share Ready: Video Compressor',
+    description: 'Videoları kalite kaybı olmadan sıkıştırır; WhatsApp, Telegram ve e-posta için boyutlandırır.',
     icon: '/shareready_icon.png',
     technologies: ['Flutter', 'Riverpod', 'Vibe Coding'],
-    tech: ['Flutter', 'Riverpod', 'Vibe Coding'],
     links: {
+      playStore: play('shareready'),
       privacy: '/shareready-privacy.html'
     },
-    features: [
-      'Hazır Tasarım Şablonları',
-      'Hızlı Dışa Aktarma',
-      'Özelleştirilebilir Fontlar',
-      'Minimalist Tasarım'
-    ],
-    category: 'Utility'
+    category: 'App',
+    genre: 'Verimlilik'
   },
   {
     id: 'subzen',
-    title: 'Subzen',
-    description: 'Abonelik ve gider takibi yapan yardımcı uygulama.',
-    longDescription: 'Aylık giderlerinizi ve aboneliklerinizi kontrol altında tutmanıza yardımcı olan, hobi olarak geliştirilmiş şık bir finans aracı.',
+    title: 'SubZen: Subscription Manager',
+    description: 'Aboneliklerini tek yerden yönet, ödemeleri hatırla ve aylık giderlerini düşür.',
     icon: '/subzen_icon.png',
     technologies: ['Flutter', 'SQLite', 'Vibe Coding'],
-    tech: ['Flutter', 'SQLite', 'Vibe Coding'],
     links: {
-      web: '#'
+      playStore: play('subzen'),
+      privacy: '/subzen-privacy.html',
+      deleteAccount: '/subzen/delete-account.html'
     },
-    features: [
-      'Abonelik Takibi',
-      'Aylık Harcama Grafikleri',
-      'Hatırlatıcı Bildirimler',
-      'Karanlık Mod Desteği'
-    ],
-    category: 'Utility'
+    category: 'App',
+    genre: 'Finans'
   }
 ];
