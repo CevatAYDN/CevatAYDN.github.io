@@ -45,13 +45,45 @@
         PUBG Game Data (Stats, Match IDs) associated with your provided PUBG
         nickname
       </li>
+      <li>
+        A random anonymous user ID (Firebase Authentication), used to store
+        the player reports and coach notes you submit and to enforce their
+        daily limits
+      </li>
+    </ul>
+
+    <h2>Advertising (Unity LevelPlay)</h2>
+    <p>
+      The Application shows banner ads, an occasional full-screen ad at a
+      natural break (for example when leaving a match replay), and rewarded
+      ads that you choose to watch to unlock the AI Coach analysis or the
+      extended match history. Ads are served through Unity LevelPlay
+      mediation by the ironSource Ads and Unity Ads networks.
+    </p>
+    <ul>
+      <li>
+        To show and measure these ads, LevelPlay and its ad networks collect
+        data from your device: the advertising ID, your IP address (and the
+        approximate location derived from it), device and app information,
+        and how you interact with the ads.
+      </li>
+      <li>
+        In the European Economic Area, the United Kingdom and Switzerland the
+        Application asks for your consent with Google's consent form before
+        any ad is requested. You can change your choice at any time in
+        Settings &gt; Privacy choices.
+      </li>
+      <li>
+        You can reset or delete your advertising ID in your device settings.
+      </li>
     </ul>
 
     <h2>Data Processing and AI Features</h2>
     <p>
       The Application uses your PUBG match data to provide advanced analytics.
       The AI Coach feature processes match statistics through third-party AI
-      services (OpenRouter) to generate personalized coaching insights. No
+      services (Google Gemini API, with OpenRouter as a fallback) to generate
+      personalized coaching insights. No
       personal identity information (PII) other than your game nickname is sent
       to these services.
     </p>
@@ -73,10 +105,18 @@
       </li>
       <li>
         <a
-          href="https://support.google.com/admob/answer/6128543?hl=en"
+          href="https://unity.com/legal/game-player-and-app-user-privacy-policy"
           target="_blank"
           rel="noopener noreferrer"
-          >AdMob</a
+          >Unity LevelPlay, Unity Ads and ironSource Ads</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://policies.google.com/privacy"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Google consent form (User Messaging Platform)</a
         >
       </li>
       <li>
@@ -97,6 +137,22 @@
       </li>
       <li>
         <a
+          href="https://firebase.google.com/support/privacy"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Firebase Authentication and Cloud Firestore</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://ai.google.dev/gemini-api/terms"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Google Gemini API (AI Analysis)</a
+        >
+      </li>
+      <li>
+        <a
           href="https://openrouter.ai/privacy"
           target="_blank"
           rel="noopener noreferrer"
@@ -110,7 +166,7 @@
     <ul>
       <li>Internet access: Required to fetch match data and ads.</li>
       <li>
-        User Tracking (if applicable): To provide personalized advertisements.
+        Advertising ID: Used by the ad networks to show and measure ads.
       </li>
     </ul>
 
@@ -166,6 +222,6 @@
       or have questions about the practices, please contact us via email at
       <strong>fiftythreestudio@gmail.com</strong>.
     </p>
-    <p>Last updated: 2026-02-10</p>
+    <p>Last updated: 2026-10-29</p>
   </body>
 </html>
