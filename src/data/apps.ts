@@ -64,7 +64,7 @@ export const apps: AppData[] = [
     title: 'Formatron: Zombie Line',
     description: 'Bölüğünü zombi hattında koştur: kapılardan kart topla, kartları evrimleştir, askerlerin robota, uçağa ya da tanka dönüşsün.',
     icon: '/formatron_icon.png',
-    technologies: ['Unity'],
+    technologies: ['Unity', 'Unity LevelPlay'],
     links: {
       privacy: '/formatron-privacy.html',
       notices: '/formatron-notices.html'
