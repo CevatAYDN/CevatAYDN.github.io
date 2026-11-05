@@ -60,6 +60,19 @@ export const apps: AppData[] = [
     genre: 'Idle Tycoon'
   },
   {
+    id: 'formatron',
+    title: 'Formatron: Zombie Line',
+    description: 'Bölüğünü zombi hattında koştur: kapılardan kart topla, kartları evrimleştir, askerlerin robota, uçağa ya da tanka dönüşsün.',
+    icon: '/formatron_icon.png',
+    technologies: ['Unity'],
+    links: {
+      privacy: '/formatron-privacy.html',
+      notices: '/formatron-notices.html'
+    },
+    category: 'Game',
+    genre: 'Hybrid-Casual Runner'
+  },
+  {
     id: 'matchinsights',
     title: 'Match Insights for PUBG',
     description: 'Yapay zekâ destekli PUBG maç analizi ve kişiselleştirilmiş koçluk ipuçları.',
