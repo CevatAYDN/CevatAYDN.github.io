@@ -48,6 +48,18 @@ export const apps: AppData[] = [
     genre: 'Simülasyon'
   },
   {
+    id: 'chipcrisis',
+    title: 'Chip Crisis',
+    description: 'Küçük bir bilgisayar dükkânını büyüt: parça üret, raflara diz, çip krizinde fiyatlar uçunca depoyu boşalt.',
+    icon: '/chipcrisis_icon.png',
+    technologies: ['Unity', 'Firebase', 'Unity LevelPlay', 'Unity IAP'],
+    links: {
+      privacy: '/chipcrisis-privacy.html'
+    },
+    category: 'Game',
+    genre: 'Idle Tycoon'
+  },
+  {
     id: 'matchinsights',
     title: 'Match Insights for PUBG',
     description: 'Yapay zekâ destekli PUBG maç analizi ve kişiselleştirilmiş koçluk ipuçları.',
