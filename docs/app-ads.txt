@@ -11,6 +11,7 @@ media.net, 8CAXEGFDP, RESELLER
 media.net, 8CU675N41, RESELLER
 connekt.ai, 5585919044, RESELLER
 netmarvel.com, 1011828, RESELLER, ca3509163a633862
+playdigo.com, 1965, RESELLER
 playwire.com, 1018531, RESELLER
 pubnative.net, 1009458, RESELLER, d641df8625486a7b
 zetaglobal.net, 525, RESELLER
