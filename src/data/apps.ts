@@ -25,7 +25,7 @@ export const apps: AppData[] = [
     title: 'Wickling: Light the Dark',
     description: 'Karanlık bir ormanda küçük bir mum ol. Alevin hem canın, hem silahın, hem gözün; tek başparmakla oynanan aksiyon oyunu.',
     icon: '/wickling_icon.png',
-    technologies: ['Unity', 'Firebase', 'AdMob'],
+    technologies: ['Unity', 'Firebase', 'Unity LevelPlay', 'Unity IAP'],
     links: {
       playStore: play('wickling'),
       privacy: '/wickling-privacy.html',
