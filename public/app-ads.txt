@@ -1,7 +1,6 @@
 OWNERDOMAIN=cevataydn.github.io
 google.com, pub-6000762908067203, DIRECT, f08c47fec0942fa0
 
-google.com, pub-5383151166508880, DIRECT, f08c47fec0942fa0
 
 # Gigawatt Inc. (com.fiftythreestudio.gigawatt): Unity LevelPlay / Unity Ads
 media.net, 8CUSC3UJ7, RESELLER
